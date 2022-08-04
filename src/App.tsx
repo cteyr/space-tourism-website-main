@@ -1,19 +1,16 @@
-// @ts-ignore
-import logo from "./assets/images/logo-react.png";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainLayout } from "./layouts/MainLayout";
+import { MainContainer } from "./containers/MainContainer";
 
 const App = () => {
   return (
-    <div className="react-container">
-      <div className="react-logo">
-        <img className="rotate" src={logo} alt="" />
-      </div>
-      <div className="react-container__content">
-        <h3>Edit src/App.tsx and save to reload</h3>
-      </div>
-      <div className="react-container__footer">
-        <a href="https://reactjs.org/docs/getting-started.html">Learn React</a>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<MainContainer />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 export { App };
