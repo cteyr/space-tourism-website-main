@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const dotenv = require("dotenv");
+const webpack = require("webpack");
+const { NetlifyPlugin } = require("netlify-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -18,7 +21,7 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/i, loader: "babel-loader" },
       {
-        test: /\.s?css$/i,
+        test: /\.scss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
