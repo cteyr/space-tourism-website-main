@@ -20,7 +20,11 @@ const HomeContainer = () => {
             </p>
           </div>
         </div>
-        <div className="right-container"></div>
+        <div className="right-container">
+          <div className="home-circle">
+            <h2>EXPLORE</h2>
+          </div>
+        </div>
       </div>
     </div>
   );

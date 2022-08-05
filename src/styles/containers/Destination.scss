@@ -4,9 +4,12 @@
   width: 100%;
 
   .background-image {
-    display: flex;
-
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     img {
+      display: flex;
+      height: 100%;
       width: 100%;
     }
   }

@@ -4,9 +4,12 @@
   width: 100%;
 
   .background-image {
-    display: flex;
-
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     img {
+      display: flex;
+      height: 100%;
       width: 100%;
     }
   }
@@ -35,7 +38,6 @@
         flex-direction: column;
         width: 100%;
         margin-top: 8rem;
-        // background-color: green;
         padding: 0vw 8vw;
 
         h2 {
@@ -55,7 +57,28 @@
       }
     }
     .right-container {
-      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      .home-circle {
+        display: flex;
+        height: 12rem;
+        width: 12rem;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 16rem;
+        margin-left: 8rem;
+
+        h2 {
+          font-size: 1.6rem;
+          font-weight: lighter;
+        }
+      }
     }
   }
 }
