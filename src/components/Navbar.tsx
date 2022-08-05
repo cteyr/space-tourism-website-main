@@ -5,7 +5,7 @@ import logo from "../assets/images/shared/logo.svg";
 
 const Navbar = () => {
   const [Indication, setIndication] = useState(0);
-  const [WidthIndication, setWidthIndication] = useState(66);
+  const [WidthIndication, setWidthIndication] = useState(75);
 
   const MoveIndicator = (id: string) => {
     let elem = document.getElementById(id);
@@ -23,8 +23,8 @@ const Navbar = () => {
           <ul>
             <li id="text-home" onClick={() => MoveIndicator("text-home")}>
               <NavLink className={"nameLink"} to="/">
-                <span> 01 </span>
-                <p>Home</p>
+                <span> 00 </span>
+                <p>HOME</p>
               </NavLink>
             </li>
             <li
@@ -32,14 +32,14 @@ const Navbar = () => {
               onClick={() => MoveIndicator("text-destination")}
             >
               <NavLink className={"nameLink"} to="/destination">
-                <span> 02 </span>
-                <p>Destination</p>
+                <span> 01 </span>
+                <p>DESTINATION</p>
               </NavLink>
             </li>
             <li id="text-crew" onClick={() => MoveIndicator("text-crew")}>
               <NavLink className={"nameLink"} to="/crew">
-                <span> 03 </span>
-                <p>Crew</p>
+                <span> 02 </span>
+                <p>CREW</p>
               </NavLink>
             </li>
             <li
@@ -47,8 +47,8 @@ const Navbar = () => {
               onClick={() => MoveIndicator("text-technology")}
             >
               <NavLink className={"nameLink"} to="/technology">
-                <span> 04 </span>
-                <p>Technology</p>
+                <span> 03 </span>
+                <p>TECHNOLOGY</p>
               </NavLink>
             </li>
           </ul>

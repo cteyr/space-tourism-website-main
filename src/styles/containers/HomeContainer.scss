@@ -7,6 +7,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+
     img {
       display: flex;
       height: 100%;
@@ -38,21 +39,24 @@
         flex-direction: column;
         width: 100%;
         margin-top: 8rem;
-        padding: 0vw 8vw;
+        padding: 0vw 8rem;
 
-        h2 {
+        .text-tittle {
           color: #bdbdbd;
           font-size: 1.6rem;
+          font-family: "Bellefair", serif;
         }
-        h1 {
-          text-align: center;
+        .text-body {
+          text-align: left;
           font-size: 9rem;
           color: #fafafa;
           margin-bottom: 2rem;
+          font-family: "Bellefair", serif;
         }
-        p {
-          font-size: 1.23rem;
+        .text {
+          font-size: 1.24rem;
           color: #bdbdbd;
+          font-family: "Bellefair", serif;
         }
       }
     }
@@ -75,8 +79,9 @@
         margin-left: 8rem;
 
         h2 {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
           font-weight: lighter;
+          font-family: "Bellefair", serif;
         }
       }
     }
