@@ -10,4 +10,52 @@
       width: 100%;
     }
   }
+  .mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .left-container,
+    .right-container {
+      flex: 1;
+      height: 100%;
+      width: 100%;
+    }
+    .left-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .text-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8rem;
+        // background-color: green;
+        padding: 0vw 8vw;
+
+        h2 {
+          color: #bdbdbd;
+          font-size: 1.6rem;
+        }
+        h1 {
+          text-align: center;
+          font-size: 9rem;
+          color: #fafafa;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: 1.23rem;
+          color: #bdbdbd;
+        }
+      }
+    }
+    .right-container {
+      background-color: transparent;
+    }
+  }
 }
