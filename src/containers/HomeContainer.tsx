@@ -1,12 +1,10 @@
 //@ts-ignore
-import home_background from "../assets/images/home/background-home-desktop.jpg";
+//import home_background from "../assets/images/home/background-home-desktop.jpg";
 
 const HomeContainer = () => {
   return (
     <div className="homeContainer">
-      <div className="background-image">
-        <img src={home_background} alt="" />
-      </div>
+      <div className="background-image"></div>
       <div className="mainContainer">
         <div className="left-container">
           <div className="text-container">

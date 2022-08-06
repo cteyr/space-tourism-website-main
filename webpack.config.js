@@ -21,7 +21,7 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/i, loader: "babel-loader" },
       {
-        test: /\.scss$/i,
+        test: /\.s?css$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
