@@ -39,7 +39,7 @@
         flex-direction: column;
         width: 100%;
         margin-top: 8rem;
-        padding: 0vw 8rem;
+        padding: 0vw 8vw;
 
         .text-tittle {
           color: #bdbdbd;
@@ -50,13 +50,14 @@
           text-align: left;
           font-size: 9rem;
           color: #fafafa;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           font-family: "Bellefair", serif;
         }
         .text {
-          font-size: 1.24rem;
+          font-size: 1.35rem;
           color: #bdbdbd;
           font-family: "Bellefair", serif;
+          text-align: justify;
         }
       }
     }
@@ -75,8 +76,8 @@
         justify-content: center;
         background-color: white;
         border-radius: 50%;
-        margin-top: 16rem;
-        margin-left: 8rem;
+        margin-top: 15rem;
+        margin-left: 8.2vw;
 
         h2 {
           font-size: 1.7rem;
