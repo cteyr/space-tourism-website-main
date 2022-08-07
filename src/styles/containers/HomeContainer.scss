@@ -15,6 +15,13 @@
     height: 160vh;
   }
 
+  @media screen and (max-width: 468px) {
+    background: url("../assets/images/home/background-home-mobile.jpg") center
+      center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
   .mainContainer {
     display: flex;
     align-items: center;
@@ -45,8 +52,14 @@
         width: 100%;
         margin-top: 11rem;
         padding: 0vw 8vw;
+
         @media screen and (max-width: 768px) {
           padding: 0vw 12vw;
+        }
+
+        @media screen and (max-width: 468px) {
+          margin-top: 18vh;
+          padding: 0vw 5vw;
         }
 
         .text-tittle {
@@ -58,6 +71,11 @@
             text-align: center;
             font-size: 1.3rem;
             margin-bottom: 1rem;
+          }
+
+          @media screen and (max-width: 468px) {
+            margin-bottom: 1rem;
+            font-size: 1rem;
           }
         }
         .text-body {
@@ -71,6 +89,11 @@
             text-align: center;
             font-size: 10rem;
           }
+
+          @media screen and (max-width: 468px) {
+            margin-bottom: 1.5rem;
+            font-size: 5rem;
+          }
         }
         .text {
           font-size: 1.35rem;
@@ -81,6 +104,11 @@
           @media screen and (max-width: 768px) {
             text-align: center;
             font-size: 1.3rem;
+          }
+
+          @media screen and (max-width: 468px) {
+            text-align: center;
+            font-size: 1.1rem;
           }
         }
       }
@@ -109,6 +137,12 @@
           margin-left: 0vw;
         }
 
+        @media screen and (max-width: 468px) {
+          margin-top: 15vh;
+          height: 9rem;
+          width: 9rem;
+        }
+
         h2 {
           font-size: 1.7rem;
           font-weight: lighter;
@@ -116,6 +150,10 @@
 
           @media screen and (max-width: 768px) {
             font-size: 2rem;
+          }
+
+          @media screen and (max-width: 468px) {
+            font-size: 1.4rem;
           }
 
           &:hover {

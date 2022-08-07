@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //@ts-ignore
 import logo from "../assets/images/shared/logo.svg";
 
 const Navbar = () => {
   const [Indication, setIndication] = useState(0);
   const [WidthIndication, setWidthIndication] = useState(75);
+
+  useEffect(() => {
+    console.log("hola");
+  }, [Indication]);
 
   const MoveIndicator = (id: string) => {
     let elem = document.getElementById(id);
