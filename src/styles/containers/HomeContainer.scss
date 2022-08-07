@@ -1,47 +1,64 @@
 .homeContainer {
   display: flex;
+  position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
+  background: url("../assets/images/home/background-home-desktop.jpg") center
+    center no-repeat;
+  background-size: cover;
 
-  .background-image {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background: url("../assets/images/home/background-home-desktop.jpg");
-    background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    background: url("../assets/images/home/background-home-tablet.jpg") center
+      center no-repeat;
     background-size: cover;
+    height: 160vh;
   }
+
   .mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    height: 100%;
+    height: auto;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .left-container,
     .right-container {
       flex: 1;
-      height: 100%;
-      width: 100%;
     }
     .left-container {
       display: flex;
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 768px) {
+      }
+
       .text-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
         width: 100%;
-        margin-top: 8rem;
+        margin-top: 12rem;
         padding: 0vw 8vw;
+        @media screen and (max-width: 768px) {
+          padding: 0vw 12vw;
+        }
 
         .text-tittle {
           color: #bdbdbd;
           font-size: 1.6rem;
           font-family: "Bellefair", serif;
+
+          @media screen and (max-width: 768px) {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
         }
         .text-body {
           text-align: left;
@@ -49,19 +66,28 @@
           color: #fafafa;
           margin-bottom: 1rem;
           font-family: "Bellefair", serif;
+
+          @media screen and (max-width: 768px) {
+            text-align: center;
+            font-size: 10rem;
+          }
         }
         .text {
           font-size: 1.35rem;
           color: #bdbdbd;
           font-family: "Bellefair", serif;
           text-align: justify;
+
+          @media screen and (max-width: 768px) {
+            text-align: center;
+            font-size: 1.3rem;
+          }
         }
       }
     }
     .right-container {
       display: flex;
       justify-content: center;
-      align-items: center;
       height: 100%;
       width: 100%;
 
@@ -73,13 +99,28 @@
         justify-content: center;
         background-color: white;
         border-radius: 50%;
-        margin-top: 15rem;
+        margin-top: 23rem;
         margin-left: 8.2vw;
+
+        @media screen and (max-width: 768px) {
+          height: 16rem;
+          width: 16rem;
+          margin-top: 9.5rem;
+          margin-left: 0vw;
+        }
 
         h2 {
           font-size: 1.7rem;
           font-weight: lighter;
           font-family: "Bellefair", serif;
+
+          @media screen and (max-width: 768px) {
+            font-size: 2rem;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

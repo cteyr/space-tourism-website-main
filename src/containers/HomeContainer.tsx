@@ -4,7 +4,6 @@
 const HomeContainer = () => {
   return (
     <div className="homeContainer">
-      <div className="background-image"></div>
       <div className="mainContainer">
         <div className="left-container">
           <div className="text-container">

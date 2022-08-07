@@ -21,32 +21,42 @@ const Navbar = () => {
       <div className="navbar">
         <nav>
           <ul>
-            <li id="text-home" onClick={() => MoveIndicator("text-home")}>
-              <NavLink className={"nameLink"} to="/">
+            <li id="text-home">
+              <NavLink
+                className={"nameLink"}
+                to="/"
+                onClick={() => MoveIndicator("text-home")}
+              >
                 <span> 00 </span>
                 <p>HOME</p>
               </NavLink>
             </li>
-            <li
-              id="text-destination"
-              onClick={() => MoveIndicator("text-destination")}
-            >
-              <NavLink className={"nameLink"} to="/destination">
+            <li id="text-destination">
+              <NavLink
+                className={"nameLink"}
+                to="/destination"
+                onClick={() => MoveIndicator("text-destination")}
+              >
                 <span> 01 </span>
                 <p>DESTINATION</p>
               </NavLink>
             </li>
-            <li id="text-crew" onClick={() => MoveIndicator("text-crew")}>
-              <NavLink className={"nameLink"} to="/crew">
+            <li id="text-crew">
+              <NavLink
+                className={"nameLink"}
+                to="/crew"
+                onClick={() => MoveIndicator("text-crew")}
+              >
                 <span> 02 </span>
                 <p>CREW</p>
               </NavLink>
             </li>
-            <li
-              id="text-technology"
-              onClick={() => MoveIndicator("text-technology")}
-            >
-              <NavLink className={"nameLink"} to="/technology">
+            <li id="text-technology">
+              <NavLink
+                className={"nameLink"}
+                to="/technology"
+                onClick={() => MoveIndicator("text-technology")}
+              >
                 <span> 03 </span>
                 <p>TECHNOLOGY</p>
               </NavLink>
