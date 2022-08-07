@@ -74,13 +74,13 @@
           }
 
           @media screen and (max-width: 468px) {
-            margin-bottom: 1rem;
+            margin-bottom: 1vh;
             font-size: 1rem;
           }
         }
         .text-body {
           text-align: left;
-          font-size: 9rem;
+          font-size: 9em;
           color: #fafafa;
           margin-bottom: 1rem;
           font-family: "Bellefair", serif;
@@ -91,12 +91,12 @@
           }
 
           @media screen and (max-width: 468px) {
-            margin-bottom: 1.5rem;
-            font-size: 5rem;
+            margin-bottom: 2vh;
+            font-size: 5em;
           }
         }
         .text {
-          font-size: 1.35rem;
+          font-size: 1.3em;
           color: #bdbdbd;
           font-family: "Bellefair", serif;
           text-align: justify;
@@ -108,7 +108,7 @@
 
           @media screen and (max-width: 468px) {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: calc(1rem + 1.2vw);
           }
         }
       }
@@ -138,7 +138,7 @@
         }
 
         @media screen and (max-width: 468px) {
-          margin-top: 16vh;
+          margin-top: 15vh;
           height: 9rem;
           width: 9rem;
         }
