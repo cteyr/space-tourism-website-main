@@ -22,6 +22,7 @@ const Navbar = () => {
   return (
     <div className="header">
       <img className="logo-image" src={logo} alt="" />
+      <div className="hamburger"></div>
       <div className="navbar">
         <nav>
           <ul>
