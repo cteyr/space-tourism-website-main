@@ -44,15 +44,16 @@
     backdrop-filter: blur(18px);
     justify-content: space-between;
     height: 100%;
-    width: 55.5vw;
+    width: 54.4vw;
     min-width: 45rem;
     color: white;
     opacity: 1;
     font-family: "Bellefair", serif;
-    // background-color: red;
 
     @media screen and (max-width: 768px) {
-      width: 65.5vw;
+      align-items: center;
+      justify-content: center;
+      width: 30rem;
       min-width: 0rem;
     }
 
@@ -66,10 +67,12 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
+      margin-left: 5.5rem;
+     // background-color: red;
 
       @media screen and (max-width: 768px) {
-        // width: 55.5vw;
-        //position: relative;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .indicador {
@@ -78,19 +81,20 @@
         position: absolute;
         bottom: 0;
         transition: 0.3s ease-out all;
-        margin-left: 88px;
+        //margin-left: 88px;
+
+        @media screen and (max-width: 768px) {
+         // margin-left: 5px;
+        }
       }
 
       ul {
         display: flex;
         height: 100%;
-        width: 100%;
-        padding-left: 5.5rem;
-        //background-color: orange;
+      //  background-color: orange;
 
         @media screen and (max-width: 768px) {
-          padding-left: 1vw;
-          padding-right: 4.3vw;
+        //  padding-left: 0;
         }
 
         li {
@@ -98,10 +102,11 @@
           height: 100%;
           justify-content: space-between;
           list-style-type: none;
+          margin-right: 3.5rem;
           //  background-color: green;
 
           @media screen and (max-width: 768px) {
-            width: 100%;
+            margin-right: 2rem;
             justify-content: center;
           }
 
@@ -111,14 +116,12 @@
             align-items: center;
             text-decoration: none;
             color: #bdbdbd;
-            margin-right: 3rem;
 
             @media screen and (max-width: 768px) {
               P {
                 font-size: 0.85rem;
               }
               margin-right: 0vw;
-              //background-color: brown;
             }
 
             span {

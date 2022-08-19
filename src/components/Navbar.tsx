@@ -6,16 +6,17 @@ import logo from "../assets/images/shared/logo.svg";
 const Navbar = () => {
   const [Indication, setIndication] = useState(0);
   const [WidthIndication, setWidthIndication] = useState(75);
+  
 
   useEffect(() => {
     console.log("hola");
-  }, [Indication]);
+  }, );
 
-  const MoveIndicator = (id: string) => {
-    let elem = document.getElementById(id);
-    var left = elem.offsetLeft - 88;
+  const MoveIndicator = (nameLink: string) => {
+    let elem = document.getElementById(nameLink);
+    var left = elem.offsetLeft;
     setIndication(left);
-    var width = elem.offsetWidth - 45;
+    var width = elem.offsetWidth;
     setWidthIndication(width);
   };
 
