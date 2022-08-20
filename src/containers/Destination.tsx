@@ -16,7 +16,29 @@ const Destination = () => {
         <div className="imageTitan"></div>
         </div>
       </div>
-      <div className="right-container"></div>
+      <div className="right-container">
+        <div className="text-container">
+          <div className="navBar">
+            <ul>
+              <li>MOON</li>
+              <li>MARS</li>
+              <li>EUROPA</li>
+              <li>TITAN</li>
+            </ul>
+          </div>
+          <div className="body-text">
+            <div className="name-planet">
+               <p>{destinationData[0][1].name}</p>
+            </div>
+              <p>{destinationData[0][1].description}</p>
+          </div>
+          <hr />
+          <div className="footer-text">
+            <div className="avg-distance"> <p className="tittle">AVG. DISTANCE</p> <p>{destinationData[0][1].distance}</p></div>
+            <div className="est-travel"><p className="tittle">EST. TRAVEL TIME</p> <p>{destinationData[0][1].travel}</p></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>;
 };

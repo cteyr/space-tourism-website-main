@@ -55,6 +55,7 @@
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-moon.png")center right no-repeat;
+        display: none;
         
       }
       .imageMars{
@@ -63,7 +64,6 @@
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-mars.png")center right no-repeat;
-        display: none;
        }
        .imageEuropa{
         display: flex;
@@ -86,9 +86,102 @@
      
     }
     .right-container{
+      display: flex;
+      position: relative;
       height: 100%;
       width: 100%;
-    //  background-color: blue;
+      align-items: center;
+      justify-content: center;
+
+      .text-container{
+        position: absolute;
+        height: 73%;
+        width: 100%;
+        bottom: 0rem;
+        padding-left: 7.5rem;
+        padding-right: 12rem;
+
+        .navBar{
+          display: flex;
+          height: 3rem;
+          width: 100%;
+
+          ul{
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+            li{
+              display: flex;
+              height: 100%;
+              align-items: center;
+              list-style-type: none;
+              margin-right: 2rem;
+              color: #bdbdbd;
+
+              &:hover{
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .body-text{
+          width: 100%;
+          padding: 2.7rem 0rem; 
+
+          .name-planet{
+            display: flex;
+            width: 100%;
+            p{
+              text-transform: uppercase;
+              font-size: 7rem;
+              color: white;
+              padding-bottom: 1rem;
+            }
+          }
+          p{
+            font-size: 1.3rem;
+            color: #bdbdbd;
+          }
+        }
+        hr {
+          height: 0.1px;
+          background-color: hsl(235, 8%, 26%);
+          border: none;
+        }
+        .footer-text{
+          display: flex;
+          width: 100%;
+          padding-top: 2.5rem;
+
+          .avg-distance{
+            margin-right: 3rem;
+
+            .tittle{
+              font-size: 0.8rem;
+              color: #8d8b8b;
+              margin-bottom: 0.3rem;
+            }
+            p{
+              font-size: 1.5rem;
+              text-transform: uppercase;
+              color: #bdbdbd;
+            }
+          }
+          .est-travel{
+            .tittle{
+              font-size: 0.8rem;
+              color:  #8d8b8b;
+              margin-bottom: 0.3rem;
+            }
+            p{
+              font-size: 1.5rem;
+              text-transform: uppercase;
+              color: #bdbdbd;
+            }
+          }
+        }
+      }
     }
   }
 }
