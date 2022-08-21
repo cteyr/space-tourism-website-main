@@ -49,37 +49,34 @@
           margin-right: 1rem;
         }
       }
-      .imageMoon{
+      .imageDestination-Moon{
         display: flex;
         justify-content: right;
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-moon.png")center right no-repeat;
-        display: none;
         
       }
-      .imageMars{
+      .imageDestination-Mars{
         display: flex;
         justify-content: right;
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-mars.png")center right no-repeat;
        }
-       .imageEuropa{
+       .imageDestination-Europa{
         display: flex;
         justify-content: right;
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-europa.png")center right no-repeat;
-        display: none;
        }
-       .imageTitan{
+       .imageDestination-Titan{
         display: flex;
         justify-content: right;
         height: 100%;
         width: 100%;
         background: url("../assets/images/destination/image-titan.png")center right no-repeat;
-        display: none;
        }
        
      }
@@ -103,13 +100,16 @@
 
         .navBar{
           display: flex;
+          position: relative;
           height: 3rem;
           width: 100%;
+       //   background-color: green;
 
           ul{
             display: flex;
             height: 100%;
             width: 100%;
+        //    background-color: red;
 
             li{
               display: flex;
@@ -123,6 +123,13 @@
                 cursor: pointer;
               }
             }
+          }
+          .indicador{
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            transition: 0.3s ease-out all;
           }
         }
         .body-text{

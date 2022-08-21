@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import logo from "../assets/images/shared/logo.svg";
 
 const Navbar = () => {
-  const [Indication, setIndication] = useState(0);
-  const [WidthIndication, setWidthIndication] = useState(75);
+  const [moveIndication, setMoveIndication] = useState(0);
+  const [WidthIndication, setWidthIndication] = useState(72);
   
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Navbar = () => {
   const MoveIndicator = (nameLink: string) => {
     let elem = document.getElementById(nameLink);
     var left = elem.offsetLeft;
-    setIndication(left);
+    setMoveIndication(left);
     var width = elem.offsetWidth;
     setWidthIndication(width);
   };
@@ -71,7 +71,7 @@ const Navbar = () => {
           <span
             className="indicador"
             style={{
-              transform: `translate(${Indication}px)`,
+              transform: `translate(${moveIndication}px)`,
               width: `${WidthIndication}px`,
             }}
           ></span>
