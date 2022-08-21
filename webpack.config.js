@@ -35,7 +35,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-     title: "SpaceTourism",
+     title: "Space Tourism",
      template: "./public/index.html" 
     }),
     new webpack.ProvidePlugin({
@@ -51,7 +51,7 @@ module.exports = {
       ],
     }),
     new WebpackPwaManifest({
-      name: "SpaceTourism",
+      name: "Space Tourism",
       short_name: "Space tourism",
       start_url: "/",
       display: "standalone",
