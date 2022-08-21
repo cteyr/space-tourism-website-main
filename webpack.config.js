@@ -3,6 +3,8 @@ const path = require("path");
 const dotenv = require("dotenv");
 const webpack = require("webpack");
 const { NetlifyPlugin } = require("netlify-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -15,6 +17,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
     clean: true,
   },
   module: {
@@ -30,9 +33,34 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({
+     title: "Space tourism",
+     template: "./public/index.html" 
+    }),
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+    }),
+    new NetlifyPlugin({
+      redirects: [
+        {
+          from: "/*",
+          to: "/index.html",
+          status: 200,
+        },
+      ],
+    }),
+    new WebpackPwaManifest({
+      name: "Space tourism",
+      short_name: "Space tourism",
+      start_url: "/",
+      display: "standalone",
+      scope: "/",
+    }),
+    ],
   devServer: {
     port: 3000,
     open: true,
+    historyApiFallback: true,
   },
 };
