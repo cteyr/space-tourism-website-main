@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dataJson from "../data.json"
 
 const Destination = () => {
@@ -7,25 +7,23 @@ const Destination = () => {
   const [imageDestination, setImageDestination] = useState("Moon");
   const [destinationData,setdestinationData]= useState([dataJson.destinations]);
   const [numPlanet, setNumPlanet]= useState(0);
-  
 
-  const MoveIndicator = (nameLink: string) => {
-    if(nameLink==="Moon"){
-      setNumPlanet(0);
-    }else if(nameLink==="Mars"){
-      setNumPlanet(1);
-    }else if(nameLink=="Europa"){
-      setNumPlanet(2);
-    }else{
-      setNumPlanet(3);
-    }
-    setImageDestination(nameLink);
-    let elem = document.getElementById(nameLink);
+  const MoveIndicator = (namePlanet: string) => {
+    setImageDestination(namePlanet);
+    let elem = document.getElementById(namePlanet);
     var left = elem.offsetLeft;
     setMoveIndication(left);
     var width = elem.offsetWidth;
     setWidthIndication(width);
   };
+
+  useEffect(() => {
+    for (var i = 0; i < destinationData[0].length; i++){
+      if(destinationData[0][i].name===imageDestination){
+        setNumPlanet(i); 
+      }
+    }
+  },[imageDestination]);
   
   return <div className="destinationContainer">
     <div className="mainContainer">
