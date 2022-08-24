@@ -8,4 +8,36 @@
   background: url("../assets/images/crew/background-crew-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  .mainContainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .left-container,
+    .right-container{
+      flex: 1;
+    }
+    .left-container{
+      display: flex;
+      height: 100%;
+      width: 100%;
+    //  background-color: green;
+    }
+    .right-container{
+      display: flex;
+      position: relative;
+      width: 100%;
+
+      .imagePesonage{
+        display: flex;
+        position: absolute;
+        bottom: 0rem;
+        left: 2.5rem;
+        height: 80%;
+        width: 75%;
+        background: url("../assets/images/crew/image-anousheh-ansari.png") center left no-repeat;
+      }
+    }
+  }
 }
