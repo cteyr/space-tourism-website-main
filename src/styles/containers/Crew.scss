@@ -4,7 +4,7 @@
   top: 0%;
   height: 100%;
   width: 100%;
-
+  font-family: "Bellefair", serif;
   background: url("../assets/images/crew/background-crew-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@
         flex-direction: column;
         position: absolute;
         height: 78%;
-        width: 79%;
+        width: 78.7%;
         bottom: 0rem;
         right: 0rem;
       //  background-color: blue;
@@ -45,6 +45,7 @@
           p{
             color: #bdbdbd;
             font-size: 1.8rem;
+            word-spacing: 0.5rem;
 
             span{
               color: hsl(234, 11%, 52%);
