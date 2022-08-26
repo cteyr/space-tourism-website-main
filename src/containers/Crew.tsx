@@ -7,7 +7,7 @@ const Crew = () => {
       <div className="mainContainer">
         <div className="left-container">
           <div className="text-container">
-            <div className="tittle-container"><p><span>01</span>PICK YOUR DESTINATION</p>
+            <div className="tittle-container"><p><span>02</span>MEET YOUR CREW</p>
             </div>
           </div>
         </div>
