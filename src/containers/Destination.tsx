@@ -5,7 +5,7 @@ const Destination = () => {
   const [moveIndication, setMoveIndication] = useState(0);
   const [WidthIndication, setWidthIndication] = useState(53);
   const [imageDestination, setImageDestination] = useState("Moon");
-  const [destinationData,setdestinationData]= useState([dataJson.destinations]);
+  const [destinationData]= useState([dataJson.destinations]);
   const [numPlanet, setNumPlanet]= useState(0);
 
   const MoveIndicator = (namePlanet: string) => {

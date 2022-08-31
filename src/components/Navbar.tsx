@@ -1,16 +1,61 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 //@ts-ignore
 import logo from "../assets/images/shared/logo.svg";
 
 const Navbar = () => {
-  const [moveIndication, setMoveIndication] = useState(0);
-  const [WidthIndication, setWidthIndication] = useState(72);
-  
+  const pageWidth  = document.documentElement.scrollWidth;
+  const getWidth=(url:string)=>{
+    if (url==="http://localhost:3000/"){
+      if(pageWidth<=768){
+        return 41;
+      }
+    return  72;
+    }else if(url==="http://localhost:3000/destination"){
+      if(pageWidth<=768){
+        return 89;
+      }
+    return  126;
+    }else if(url==="http://localhost:3000/crew"){
+      if(pageWidth<=768){
+        return 38;
+      }
+    return  69;
+    }else if(url==="http://localhost:3000/technology"){
+      if(pageWidth<=768){
+        return 92;
+      }
+    return  132;
+    }
+  }
 
-  useEffect(() => {
-    console.log("hola");
-  }, );
+  const getIndication=(url:string)=>{
+    const pageWidth  = document.documentElement.scrollWidth;
+    if (url==="http://localhost:3000/"){
+      if(pageWidth<=768){
+        return 0;
+      }
+      return 0;
+    }else if(url==="http://localhost:3000/destination"){
+      if(pageWidth<=768){
+        return 73;
+      }
+      return 128;
+    }else if(url==="http://localhost:3000/crew"){
+      if(pageWidth<=768){
+        return 194;
+      }
+      return 311;
+    }else if(url==="http://localhost:3000/technology"){
+      if(pageWidth<=768){
+        return 264;
+      }
+     return 436;
+    }
+  }
+
+  const [moveIndication, setMoveIndication] = useState(getIndication(window.location.toString()));
+  const [WidthIndication, setWidthIndication] = useState(getWidth(window.location.toString()));
 
   const MoveIndicator = (nameLink: string) => {
     let elem = document.getElementById(nameLink);
@@ -27,41 +72,41 @@ const Navbar = () => {
       <div className="navbar">
         <nav>
           <ul>
-            <li id="text-home">
+            <li id="home">
               <NavLink
                 className={"nameLink"}
                 to="/"
-                onClick={() => MoveIndicator("text-home")}
+                onClick={() => MoveIndicator("home")}
               >
                 <span> 00 </span>
                 <p>HOME</p>
               </NavLink>
             </li>
-            <li id="text-destination">
+            <li id="destination">
               <NavLink
                 className={"nameLink"}
                 to="/destination"
-                onClick={() => MoveIndicator("text-destination")}
+                onClick={() => MoveIndicator("destination")}
               >
                 <span> 01 </span>
                 <p>DESTINATION</p>
               </NavLink>
             </li>
-            <li id="text-crew">
+            <li id="crew">
               <NavLink
                 className={"nameLink"}
                 to="/crew"
-                onClick={() => MoveIndicator("text-crew")}
+                onClick={() => MoveIndicator("crew")}
               >
                 <span> 02 </span>
                 <p>CREW</p>
               </NavLink>
             </li>
-            <li id="text-technology">
+            <li id="technology">
               <NavLink
                 className={"nameLink"}
                 to="/technology"
-                onClick={() => MoveIndicator("text-technology")}
+                onClick={() => MoveIndicator("technology")}
               >
                 <span> 03 </span>
                 <p>TECHNOLOGY</p>
