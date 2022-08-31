@@ -6,51 +6,51 @@ import logo from "../assets/images/shared/logo.svg";
 const Navbar = () => {
   const pageWidth  = document.documentElement.scrollWidth;
   const getWidth=(url:string)=>{
-    if (url==="http://localhost:3000/"){
-      if(pageWidth<=768){
-        return 41;
-      }
-    return  72;
-    }else if(url==="http://localhost:3000/destination"){
+    if(url.includes("/destination")){
       if(pageWidth<=768){
         return 89;
       }
     return  126;
-    }else if(url==="http://localhost:3000/crew"){
+    }else if(url.includes("/crew")){
       if(pageWidth<=768){
         return 38;
       }
     return  69;
-    }else if(url==="http://localhost:3000/technology"){
+    }else if(url.includes("/technology")){
       if(pageWidth<=768){
         return 92;
       }
     return  132;
-    }
+    }else{
+        if(pageWidth<=768){
+          return 41;
+        }
+      return  72;
+      }
   }
 
   const getIndication=(url:string)=>{
     const pageWidth  = document.documentElement.scrollWidth;
-    if (url==="http://localhost:3000/"){
-      if(pageWidth<=768){
-        return 0;
-      }
-      return 0;
-    }else if(url==="http://localhost:3000/destination"){
+    if(url.includes("/destination")){
       if(pageWidth<=768){
         return 73;
       }
       return 128;
-    }else if(url==="http://localhost:3000/crew"){
+    }else if(url.includes("/crew")){
       if(pageWidth<=768){
         return 194;
       }
       return 311;
-    }else if(url==="http://localhost:3000/technology"){
+    }else if(url.includes("/technology")){
       if(pageWidth<=768){
         return 264;
       }
      return 436;
+    }else{
+      if(pageWidth<=768){
+        return 0;
+      }
+      return 0;
     }
   }
 
