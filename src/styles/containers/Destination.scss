@@ -9,12 +9,23 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media screen and (max-width: 768px) {
+  background: url("../assets/images/destination/background-destination-desktop.jpg") center
+  center no-repeat;
+  background-size: cover;
+  height: 170vh;
+  }
+
   .mainContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .left-container,
     .right-container {
@@ -27,61 +38,59 @@
       height: 100%;
       width: 100%;
 
+      @media screen and (max-width: 768px) {
+        margin-top: 9rem;
+      }
+
      .text-container{
       display: flex;
       position: absolute;
       align-items: center;
-      justify-content: center;
+     // justify-content: center;
       flex-direction: column;
       height: 78%;
       width: 95%;
       bottom: 0rem;
-     
+   
+      @media screen and (max-width: 768px) {
+        height: 100%;
+        width: 100%;
+      }
+
       p{
        text-align: center;
         width: 100%;
         color: #bdbdbd;
         font-size: 1.8rem;
         word-spacing: 0.5rem;
+        
+        @media screen and (max-width: 768px) {
+          text-align: left;
+            font-size: 1.7rem;
+          margin-left: 4rem;
+        }
 
         span{
           color: hsl(234, 11%, 52%);
           margin-right: 1rem;
         }
       }
-      .imageDestination-Moon{
-        display: flex;
-        justify-content: right;
+
+      .imageDestination{
+        margin-top: 2.5rem;
+
+       img{
         height: 100%;
-        width: 100%;
-        background: url("../assets/images/destination/image-moon.png")center right no-repeat;
+
+        @media screen and (max-width: 768px) {
+        height: 95%;
+        }
+       }
         
-      }
-      .imageDestination-Mars{
-        display: flex;
-        justify-content: right;
-        height: 100%;
-        width: 100%;
-        background: url("../assets/images/destination/image-mars.png")center right no-repeat;
-       }
-       .imageDestination-Europa{
-        display: flex;
-        justify-content: right;
-        height: 100%;
-        width: 100%;
-        background: url("../assets/images/destination/image-europa.png")center right no-repeat;
-       }
-       .imageDestination-Titan{
-        display: flex;
-        justify-content: right;
-        height: 100%;
-        width: 100%;
-        background: url("../assets/images/destination/image-titan.png")center right no-repeat;
-       }
-       
+      }  
      }
-     
     }
+
     .right-container{
       display: flex;
       position: relative;
@@ -98,18 +107,30 @@
         padding-left: 7.5rem;
         padding-right: 12rem;
 
+        @media screen and (max-width: 768px) {
+         top: -1rem;
+        }
+
         .navBar{
           display: flex;
-          position: relative;
+          position: relative; 
           height: 3rem;
           width: 100%;
-       //   background-color: green;
+
+          @media screen and (max-width: 768px) {
+            justify-content: center;
+            padding-left: 2rem;
+            
+           }
 
           ul{
             display: flex;
             height: 100%;
-            width: 100%;
-        //    background-color: red;
+
+           @media screen and (max-width: 768px) {
+            justify-content: center;
+    
+           }
 
             li{
               display: flex;
@@ -136,19 +157,45 @@
           width: 100%;
           padding: 2.7rem 0rem; 
 
+          @media screen and (max-width: 768px) {
+            display: flex;
+           // justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2.5rem 0rem;
+           }
+
           .name-planet{
             display: flex;
             width: 100%;
+
+            @media screen and (max-width: 768px) {
+              display: flex;
+              justify-content: center;
+              width: 18.5rem;
+             }
+           
             p{
               text-transform: uppercase;
               font-size: 7rem;
               color: white;
               padding-bottom: 1rem;
+
+              @media screen and (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+               }
+
             }
           }
           p{
             font-size: 1.3rem;
             color: #bdbdbd;
+
+            @media screen and (max-width: 768px) {
+              text-align: center;
+             }
+    
           }
         }
         hr {
@@ -160,6 +207,12 @@
           display: flex;
           width: 100%;
           padding-top: 2.5rem;
+
+          @media screen and (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
 
           .avg-distance{
             margin-right: 3rem;

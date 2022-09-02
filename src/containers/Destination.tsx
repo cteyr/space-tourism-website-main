@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import dataJson from "../data.json"
+//@ts-ignore
+import Moon from "../assets/images/destination/image-moon.png";
+//@ts-ignore
+import Mars from "../assets/images/destination/image-mars.png";
+//@ts-ignore
+import Europa from "../assets/images/destination/image-europa.png";
+//@ts-ignore
+import Titan from "../assets/images/destination/image-titan.png";
 
 const Destination = () => {
   const [moveIndication, setMoveIndication] = useState(0);
@@ -29,7 +37,20 @@ const Destination = () => {
     <div className="mainContainer">
       <div className="left-container">
         <div className="text-container"><p><span>01</span>PICK YOUR DESTINATION</p>
-        <div className={`imageDestination-${imageDestination}`}></div>
+        <div className={`imageDestination`}>
+          {imageDestination ==="Moon"?(
+            <img src={Moon} alt="" />
+            ):( <></>)}
+            {imageDestination ==="Mars"?(
+            <img src={Mars} alt="" />
+            ):( <></>)}
+            {imageDestination ==="Europa"?(
+            <img src={Europa} alt="" />
+            ):( <></>)}
+            {imageDestination ==="Titan"?(
+            <img src={Titan} alt="" />
+            ):( <></>)}
+        </div>
         </div>
       </div>
       <div className="right-container">
