@@ -69,9 +69,9 @@ const Destination = () => {
           </div>
           <div className="body-text">
             <div className="name-planet">
-               <p>{destinationData[0][numPlanet].name}</p>
+               <p >{destinationData[0][numPlanet].name}</p>
             </div>
-              <p>{destinationData[0][numPlanet].description}</p>
+              <p >{destinationData[0][numPlanet].description}</p>
           </div>
           <hr />
           <div className="footer-text">

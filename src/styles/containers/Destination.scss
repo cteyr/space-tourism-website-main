@@ -13,7 +13,14 @@
   background: url("../assets/images/destination/background-destination-desktop.jpg") center
   center no-repeat;
   background-size: cover;
-  height: 170vh;
+  height: 155vh;
+  }
+
+  @media screen and (max-width: 468px) {
+    background: url("../assets/images/destination/background-destination-mobile.jpg") center
+      center no-repeat;
+    background-size: cover;
+    height: 100vh;
   }
 
   .mainContainer{
@@ -40,6 +47,10 @@
 
       @media screen and (max-width: 768px) {
         margin-top: 9rem;
+      }
+
+      @media screen and (max-width: 468px) {
+       margin-top: 6rem;
       }
 
      .text-container{
@@ -70,6 +81,10 @@
           margin-left: 4rem;
         }
 
+        @media screen and (max-width: 468px) {
+          font-size: 1.3rem;
+        }
+
         span{
           color: hsl(234, 11%, 52%);
           margin-right: 1rem;
@@ -79,12 +94,21 @@
       .imageDestination{
         margin-top: 2.5rem;
 
+        @media screen and (max-width: 468px) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+         }
+
        img{
         height: 100%;
 
         @media screen and (max-width: 768px) {
         height: 95%;
         }
+
+        @media screen and (max-width: 468px) {
+          height: 55%;
+         }
        }
         
       }  
@@ -98,6 +122,7 @@
       width: 100%;
       align-items: center;
       justify-content: center;
+ //     background-color: blue;
 
       .text-container{
         position: absolute;
@@ -108,20 +133,25 @@
         padding-right: 12rem;
 
         @media screen and (max-width: 768px) {
-         top: -1rem;
+         top: 1.5rem;
+         padding: 0rem 4rem;
+        }
+        @media screen and (max-width: 468px) {
+        top: -1.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
         }
 
         .navBar{
-          display: flex;
-          position: relative; 
-          height: 3rem;
-          width: 100%;
+        display: flex;
+        position: relative; 
+        height: 3rem;
+        width: 100%;
 
-          @media screen and (max-width: 768px) {
-            justify-content: center;
-            padding-left: 2rem;
-            
-           }
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+          padding-left: 2rem;
+          }
 
           ul{
             display: flex;
@@ -162,7 +192,12 @@
            // justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 2.5rem 0rem;
+            padding: 2rem 0rem;
+          
+           }
+
+           @media screen and (max-width: 468px) {
+            padding: 0rem 0.5rem; 
            }
 
           .name-planet{
@@ -174,7 +209,13 @@
               justify-content: center;
               width: 18.5rem;
              }
-           
+
+             @media screen and (max-width: 468px) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+             }
+
             p{
               text-transform: uppercase;
               font-size: 7rem;
@@ -186,6 +227,11 @@
                 justify-content: center;
                }
 
+               @media screen and (max-width: 468px) {
+                font-size: 5rem;
+                padding-bottom: 0rem;
+               }
+
             }
           }
           p{
@@ -194,7 +240,12 @@
 
             @media screen and (max-width: 768px) {
               text-align: center;
-             }
+            }
+
+            @media screen and (max-width: 468px) {
+              font-size: 1.08rem;
+            
+            }
     
           }
         }
@@ -202,6 +253,15 @@
           height: 0.1px;
           background-color: hsl(235, 8%, 26%);
           border: none;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+
+          @media screen and (max-width: 468px) {
+            margin-top: 1rem;
+            width: 90%;
+          }
         }
         .footer-text{
           display: flex;
@@ -213,6 +273,10 @@
             align-items: center;
             justify-content: center;
            }
+          
+          @media screen and (max-width: 468px) {
+            padding-top: 1rem;
+          }
 
           .avg-distance{
             margin-right: 3rem;
@@ -226,6 +290,10 @@
               font-size: 1.5rem;
               text-transform: uppercase;
               color: #bdbdbd;
+
+              @media screen and (max-width: 468px) {
+                font-size: 1.3rem;
+              }
             }
           }
           .est-travel{
@@ -238,6 +306,10 @@
               font-size: 1.5rem;
               text-transform: uppercase;
               color: #bdbdbd;
+
+              @media screen and (max-width: 468px) {
+                font-size: 1.3rem;
+              }
             }
           }
         }
