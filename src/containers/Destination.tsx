@@ -17,12 +17,16 @@ const Destination = () => {
   const [numPlanet, setNumPlanet]= useState(0);
 
   const MoveIndicator = (namePlanet: string) => {
-    setImageDestination(namePlanet);
-    let elem = document.getElementById(namePlanet);
-    var left = elem.offsetLeft;
-    setMoveIndication(left);
-    var width = elem.offsetWidth;
-    setWidthIndication(width);
+   // const pageWidth  = document.documentElement.scrollWidth;
+    
+      setImageDestination(namePlanet);
+      let elem = document.getElementById(namePlanet);
+      var left = elem.offsetLeft;
+      setMoveIndication(left);
+      var width = elem.offsetWidth;
+      setWidthIndication(width);
+  
+ 
   };
 
   useEffect(() => {
@@ -61,11 +65,11 @@ const Destination = () => {
               <li id="Mars" onClick={() => MoveIndicator("Mars")}>MARS</li>
               <li id="Europa" onClick={() => MoveIndicator("Europa")}>EUROPA</li>
               <li id="Titan" onClick={() => MoveIndicator("Titan")}>TITAN</li>
-            </ul>
-            <div className="indicador" style={{
+              <div className="indicador" style={{
               transform: `translate(${moveIndication}px)`,
               width: `${WidthIndication}px`,
-            }}></div>
+              }}></div>
+            </ul>
           </div>
           <div className="body-text">
             <div className="name-planet">

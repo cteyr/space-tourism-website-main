@@ -1,5 +1,5 @@
 //@ts-ignore
-//import crew_background from "../assets/images/crew/background-crew-desktop.jpg";
+import ansari from "../assets/images/crew/image-anousheh-ansari.png";
 import {useState } from "react";
 import dataJson from "../data.json"
 
@@ -22,7 +22,9 @@ const Crew = () => {
           </div>
         </div>
         <div className="right-container">
-          <div className="imagePesonage"></div>
+          <div className="imagePesonage">
+            <img src={ansari} alt="" />
+          </div>
         </div>
       </div>
   </div>

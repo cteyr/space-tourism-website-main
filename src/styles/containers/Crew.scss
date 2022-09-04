@@ -94,13 +94,15 @@
       width: 100%;
 
       .imagePesonage{
-        display: flex;
+        height: 70%;
         position: absolute;
         bottom: 0rem;
-        left: 2.5rem;
-        height: 80%;
-        width: 100%;
-        background: url("../assets/images/crew/image-anousheh-ansari.png") center left no-repeat;
+        margin-left: 5rem;
+
+       img{
+        display: flex;
+          height: 100%;
+       }
       }
     }
   }

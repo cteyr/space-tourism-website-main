@@ -122,10 +122,9 @@
       width: 100%;
       align-items: center;
       justify-content: center;
- //     background-color: blue;
 
       .text-container{
-        position: absolute;
+       position: absolute;   
         height: 73%;
         width: 100%;
         bottom: 0rem;
@@ -134,33 +133,28 @@
 
         @media screen and (max-width: 768px) {
          top: 1.5rem;
-         padding: 0rem 4rem;
+         padding: 0rem 5rem;
         }
         @media screen and (max-width: 468px) {
-        top: -1.5rem;
+        top: -1.6rem;
         padding-left: 0rem;
         padding-right: 0rem;
         }
 
         .navBar{
         display: flex;
-        position: relative; 
         height: 3rem;
         width: 100%;
 
         @media screen and (max-width: 768px) {
-          justify-content: center;
+         justify-content: center;
           padding-left: 2rem;
           }
 
           ul{
             display: flex;
             height: 100%;
-
-           @media screen and (max-width: 768px) {
-            justify-content: center;
-    
-           }
+            position: relative;
 
             li{
               display: flex;
@@ -174,14 +168,15 @@
                 cursor: pointer;
               }
             }
+            .indicador{
+              height: 2px;
+              background-color: white;
+              position: absolute;
+              bottom: 0;
+              transition: 0.3s ease-out all;
+            }
           }
-          .indicador{
-            height: 2px;
-            background-color: white;
-            position: absolute;
-            bottom: 0;
-            transition: 0.3s ease-out all;
-          }
+          
         }
         .body-text{
           width: 100%;
@@ -189,10 +184,10 @@
 
           @media screen and (max-width: 768px) {
             display: flex;
-           // justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 2rem 0rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
           
            }
 
@@ -225,6 +220,7 @@
               @media screen and (max-width: 768px) {
                 display: flex;
                 justify-content: center;
+                padding-bottom: 0rem;
                }
 
                @media screen and (max-width: 468px) {
