@@ -10,23 +10,45 @@ import Europa from "../assets/images/destination/image-europa.png";
 import Titan from "../assets/images/destination/image-titan.png";
 
 const Destination = () => {
-  const [moveIndication, setMoveIndication] = useState(0);
-  const [WidthIndication, setWidthIndication] = useState(53);
-  const [imageDestination, setImageDestination] = useState("Moon");
+  
+  const holdMoveIndication = ()=>{
+    if(localStorage.getItem("Destination")==="Mars"){
+        return 85
+    }else if (localStorage.getItem("Destination")==="Europa"){
+        return 161
+    }else if (localStorage.getItem("Destination")==="Titan"){
+        return 255
+    }
+    return 0
+  }
+
+  const widthMoveIndication = ()=>{
+    if(localStorage.getItem("Destination")==="Mars"){
+        return 44
+    }else if (localStorage.getItem("Destination")==="Europa"){
+        return 62
+    }else if (localStorage.getItem("Destination")==="Titan"){
+        return 46
+    }
+    return 53
+  }
+  
+
+  const [moveIndication, setMoveIndication] = useState( holdMoveIndication());
+  const [WidthIndication, setWidthIndication] = useState(widthMoveIndication());
+  const [imageDestination, setImageDestination] = useState(localStorage.getItem("Destination"));
   const [destinationData]= useState([dataJson.destinations]);
   const [numPlanet, setNumPlanet]= useState(0);
 
   const MoveIndicator = (namePlanet: string) => {
-   // const pageWidth  = document.documentElement.scrollWidth;
-    
+   console.log(namePlanet)
       setImageDestination(namePlanet);
       let elem = document.getElementById(namePlanet);
       var left = elem.offsetLeft;
       setMoveIndication(left);
       var width = elem.offsetWidth;
       setWidthIndication(width);
-  
- 
+      localStorage.setItem("Destination", namePlanet);
   };
 
   useEffect(() => {
