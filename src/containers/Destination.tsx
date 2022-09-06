@@ -36,7 +36,7 @@ const Destination = () => {
 
   const [moveIndication, setMoveIndication] = useState( holdMoveIndication());
   const [WidthIndication, setWidthIndication] = useState(widthMoveIndication());
-  const [imageDestination, setImageDestination] = useState(localStorage.getItem("Destination"));
+  const [imageDestination, setImageDestination] = useState(localStorage.getItem("Destination")?localStorage.getItem("Destination"):"Moon");
   const [destinationData]= useState([dataJson.destinations]);
   const [numPlanet, setNumPlanet]= useState(0);
 
