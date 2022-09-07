@@ -41,7 +41,6 @@ const Destination = () => {
   const [numPlanet, setNumPlanet]= useState(0);
 
   const MoveIndicator = (namePlanet: string) => {
-   console.log(namePlanet)
       setImageDestination(namePlanet);
       let elem = document.getElementById(namePlanet);
       var left = elem.offsetLeft;
