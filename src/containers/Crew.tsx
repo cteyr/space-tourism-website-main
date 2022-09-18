@@ -7,7 +7,7 @@ import shuttleworth from "../assets/images/crew/image-mark-shuttleworth.png";
 //@ts-ignore
 import glover from "../assets/images/crew/image-victor-glover.png";
 
-import {useState } from "react";
+import {useState, useEffect } from "react";
 import dataJson from "../data.json"
 import { useReducer } from "react";
 
@@ -54,25 +54,54 @@ const reducer = (state, action) => {
 };
 
 const Crew = () => {
-  const [Character, setCharacter]= useState(ansari);
-  const [numCharacter, setNumCharacter]= useState(3);
+  const [Character, setCharacter]= useState(localStorage.getItem("Character")?localStorage.getItem("Character"):"ansari");
+  const [numCharacter, setNumCharacter]= useState(localStorage.getItem("numCharacter")?localStorage.getItem("numCharacter"):3);
   const [state, dispatch] = useReducer(reducer, initialState);
   const [crewData]= useState([dataJson.crew]);
+
+  useEffect(() => {
+    if(Character=="ansari"){
+      setCharacter(ansari)
+      dispatch({ type: `character4` });
+      setNumCharacter(3);
+    }else if(Character=="glover"){
+      setCharacter(glover)
+      dispatch({ type: `character1` });
+      setNumCharacter(0);
+    }else if(Character=="shuttleworth"){
+      setCharacter(shuttleworth)
+      dispatch({ type: `character2` });
+      setNumCharacter(1);
+    }else{
+      setCharacter(hurley)
+      dispatch({ type: `character3` });
+      setNumCharacter(2);
+    }
+    
+  },[]);
 
   const clickCharacter= (character:string)=>{
     dispatch({ type: `${character}` });
     if(character=="character1"){
       setCharacter(glover)
       setNumCharacter(0);
+      localStorage.setItem("Character", "glover");
+      localStorage.setItem("numCharacter", "0");
     }else if(character=="character2"){
       setCharacter(shuttleworth)
       setNumCharacter(1);
+      localStorage.setItem("Character", "shuttleworth");
+      localStorage.setItem("numCharacter", "1");
     }else if(character=="character3"){
       setCharacter(hurley)
       setNumCharacter(2);
+      localStorage.setItem("Character", "hurley");
+      localStorage.setItem("numCharacter", "2");
     }else {
       setCharacter(ansari)
       setNumCharacter(3);
+      localStorage.setItem("Character", "ansari");
+      localStorage.setItem("numCharacter", "3");
     }
   }
 
