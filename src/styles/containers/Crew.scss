@@ -60,7 +60,7 @@
           bottom: 0%;
           height: 70%;
           width: 100%;
-    //      background-color: brown;
+       //   background-color: brown;
 
           .profesion{
            display: flex;
@@ -85,7 +85,34 @@
             font-size: 1.3rem;
             color: #bdbdbd;
           }
+          .navBar{
+            display: flex;
+            align-items: center;
+            height: 4rem;
+            width: 100%;
+            margin-top: 2rem;
+
+            .circle{
+              height: 0.7rem;
+              width: 0.7rem;
+              border-radius: 50%;
+              margin-right: 1.2rem;
+              background-color: hsl(234, 11%, 52%);
+
+              &:hover{
+                cursor: pointer;
+              }
+            }
+            .selected{
+              height: 0.7rem;
+              width: 0.7rem;
+              border-radius: 50%;
+              margin-right: 1.2rem;
+              background-color: white;
+            }
+          }
         }
+        
       }
     }
     .right-container{
