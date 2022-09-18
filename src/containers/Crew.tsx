@@ -55,7 +55,7 @@ const reducer = (state, action) => {
 
 const Crew = () => {
   const [Character, setCharacter]= useState(localStorage.getItem("Character")?localStorage.getItem("Character"):"ansari");
-  const [numCharacter, setNumCharacter]= useState(localStorage.getItem("numCharacter")?localStorage.getItem("numCharacter"):3);
+  const [numCharacter, setNumCharacter]= useState(3);
   const [state, dispatch] = useReducer(reducer, initialState);
   const [crewData]= useState([dataJson.crew]);
 
@@ -86,22 +86,18 @@ const Crew = () => {
       setCharacter(glover)
       setNumCharacter(0);
       localStorage.setItem("Character", "glover");
-      localStorage.setItem("numCharacter", "0");
     }else if(character=="character2"){
       setCharacter(shuttleworth)
       setNumCharacter(1);
       localStorage.setItem("Character", "shuttleworth");
-      localStorage.setItem("numCharacter", "1");
     }else if(character=="character3"){
       setCharacter(hurley)
       setNumCharacter(2);
       localStorage.setItem("Character", "hurley");
-      localStorage.setItem("numCharacter", "2");
     }else {
       setCharacter(ansari)
       setNumCharacter(3);
       localStorage.setItem("Character", "ansari");
-      localStorage.setItem("numCharacter", "3");
     }
   }
 
