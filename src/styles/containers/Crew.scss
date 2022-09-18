@@ -16,6 +16,13 @@
     height: 140vh;
   }
 
+  @media screen and (max-width: 468px) {
+    background: url("../assets/images/crew/background-crew-mobile.jpg") center
+      center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
   .mainContainer{
     display: flex;
     height: 100%;
@@ -23,6 +30,10 @@
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
+    }
+
+    @media screen and (max-width: 468px) {
+      flex-direction: column-reverse;
     }
 
     .left-container,
@@ -51,12 +62,20 @@
         top: 6rem;
       }
 
+      @media screen and (max-width: 468px) {
+        top: 0rem;
+      }
+
         .tittle-container{
           display: flex;
           width: 100%;
 
         @media screen and (max-width: 768px) {
           margin-top: 3rem;
+        }
+
+        @media screen and (max-width: 468px) {
+          display: none;
         }
 
           p{
@@ -104,6 +123,10 @@
               @media screen and (max-width: 768px) {
                 font-size: 1.8rem;
               }
+
+              @media screen and (max-width: 468px) {
+                font-size: 1.4rem;
+              }
             }
           }
           .name-people{
@@ -114,6 +137,10 @@
 
             @media screen and (max-width: 768px) {
               font-size: 2.8rem;
+            }
+
+            @media screen and (max-width: 468px) {
+              font-size: 1.8rem;
             }
           }
           .bio-people{
@@ -128,6 +155,10 @@
               width: 90%;
               font-size: 1.3rem;
             }
+
+            @media screen and (max-width: 468px) {
+              font-size: 2.35vh;
+            }
           }
           .navBar{
             display: flex;
@@ -140,6 +171,10 @@
             @media screen and (max-width: 768px) {
               bottom: 0rem;
               justify-content: center;
+            }
+
+            @media screen and (max-width: 468px) {
+              top: -5rem;
             }
 
             .circle{
@@ -184,6 +219,10 @@
         @media screen and (max-width: 768px) {
           height: 100%;
           margin-left: 0rem;
+        }
+
+        @media screen and (max-width: 468px) {
+          height: 75%;
         }
 
        img{
