@@ -32,10 +32,10 @@
         flex-direction: column;
         position: absolute;
         height: 78%;
-        width: 78.7%;
+        width: 87%;
         bottom: 0rem;
-        right: 0rem;
-   //     background-color: blue;
+        right: -2rem;
+    //    background-color: red;
 
         .tittle-container{
           display: flex;
@@ -55,12 +55,13 @@
         }
         .bodyText-container{
           display: flex;
+          position: relative;
           flex-direction: column;
           position: absolute;
           bottom: 0%;
           height: 70%;
           width: 100%;
-       //   background-color: brown;
+      //    background-color: blue;
 
           .profesion{
            display: flex;
@@ -80,17 +81,19 @@
           }
           .bio-people{
             display: flex;
-            width: 74%;
+            width: 67%;
             margin-top: 1.5rem;
             font-size: 1.3rem;
             color: #bdbdbd;
+        //    background-color: red;
           }
           .navBar{
             display: flex;
             align-items: center;
+            position: absolute;
             height: 4rem;
             width: 100%;
-            margin-top: 2rem;
+            bottom: 2.5rem;
 
             .circle{
               height: 0.7rem;

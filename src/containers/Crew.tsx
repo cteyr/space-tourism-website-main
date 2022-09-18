@@ -54,20 +54,25 @@ const reducer = (state, action) => {
 };
 
 const Crew = () => {
-  const [Avatar, setAvatar]= useState(ansari)
+  const [Character, setCharacter]= useState(ansari);
+  const [numCharacter, setNumCharacter]= useState(3);
   const [state, dispatch] = useReducer(reducer, initialState);
   const [crewData]= useState([dataJson.crew]);
 
   const clickCharacter= (character:string)=>{
     dispatch({ type: `${character}` });
     if(character=="character1"){
-      setAvatar(glover)
+      setCharacter(glover)
+      setNumCharacter(0);
     }else if(character=="character2"){
-      setAvatar(shuttleworth)
+      setCharacter(shuttleworth)
+      setNumCharacter(1);
     }else if(character=="character3"){
-      setAvatar(hurley)
+      setCharacter(hurley)
+      setNumCharacter(2);
     }else {
-      setAvatar(ansari)
+      setCharacter(ansari)
+      setNumCharacter(3);
     }
   }
 
@@ -79,9 +84,9 @@ const Crew = () => {
             <div className="tittle-container"><p><span>02</span>MEET YOUR CREW</p>
             </div>
             <div className="bodyText-container">
-              <div className="profesion"><p>{crewData[0][3].role}</p></div>
-              <div className="name-people">{crewData[0][3].name}</div>
-              <div className="bio-people">{crewData[0][3].bio}</div>
+              <div className="profesion"><p>{crewData[0][numCharacter].role}</p></div>
+              <div className="name-people">{crewData[0][numCharacter].name}</div>
+              <div className="bio-people">{crewData[0][numCharacter].bio}</div>
               <div className="navBar">
                 <div className={`${state.character1} circle`} onClick={()=>clickCharacter("character1")}></div>
                 <div className={`${state.character2} circle`} onClick={()=>clickCharacter("character2")}></div>
@@ -93,7 +98,7 @@ const Crew = () => {
         </div>
         <div className="right-container">
           <div className="imagePesonage">
-            <img src={Avatar} alt="" />
+            <img src={Character} alt="" />
           </div>
         </div>
       </div>

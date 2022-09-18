@@ -57,7 +57,6 @@
       display: flex;
       position: absolute;
       align-items: center;
-     // justify-content: center;
       flex-direction: column;
       height: 78%;
       width: 95%;
@@ -74,6 +73,7 @@
         color: #bdbdbd;
         font-size: 1.8rem;
         word-spacing: 0.5rem;
+        margin-right: 4rem;
         
         @media screen and (max-width: 768px) {
           text-align: left;
