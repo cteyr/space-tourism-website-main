@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import dataJson from "../data.json"
+import dataJson from "../data.json";
+
 //@ts-ignore
 import Moon from "../assets/images/destination/image-moon.png";
 //@ts-ignore

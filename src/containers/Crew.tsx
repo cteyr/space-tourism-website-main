@@ -1,3 +1,6 @@
+import {useState, useEffect, useReducer } from "react";
+import dataJson from "../data.json"
+
 //@ts-ignore
 import ansari from "../assets/images/crew/image-anousheh-ansari.png";
 //@ts-ignore
@@ -7,9 +10,6 @@ import shuttleworth from "../assets/images/crew/image-mark-shuttleworth.png";
 //@ts-ignore
 import glover from "../assets/images/crew/image-victor-glover.png";
 
-import {useState, useEffect } from "react";
-import dataJson from "../data.json"
-import { useReducer } from "react";
 
 const initialState = {
   character1: "character1",
