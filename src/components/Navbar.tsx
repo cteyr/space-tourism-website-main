@@ -57,7 +57,12 @@ const Navbar = () => {
   const [moveIndication, setMoveIndication] = useState(getIndication(window.location.toString()));
   const [WidthIndication, setWidthIndication] = useState(getWidth(window.location.toString()));
 
+  window.addEventListener("resize", function(){
+    MoveIndicator(localStorage.getItem("NavBar"));
+  });
+
   const MoveIndicator = (nameLink: string) => {
+    localStorage.setItem("NavBar", `${nameLink}`);
     let elem = document.getElementById(nameLink);
     var left = elem.offsetLeft;
     setMoveIndication(left);

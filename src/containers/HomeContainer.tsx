@@ -1,7 +1,12 @@
-//@ts-ignore
-//import home_background from "../assets/images/home/background-home-desktop.jpg";
+import { useEffect } from "react";
+
 
 const HomeContainer = () => {
+
+  useEffect (()=>{
+    localStorage.setItem("NavBar", "home");
+  },[])
+
   return (
     <div className="homeContainer">
       <div className="mainContainer">
