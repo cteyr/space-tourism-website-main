@@ -145,7 +145,7 @@
           }
           .bio-people{
             display: flex;
-            width: 28rem;
+            max-width: 448px;
             margin-top: 1.5rem;
             font-size: 1.3rem;
             color: #bdbdbd;
