@@ -248,6 +248,7 @@
           p{
             font-size: 1.3rem;
             color: #bdbdbd;
+            max-width: 455px;
 
             @media screen and (max-width: 768px) {
               text-align: center;
@@ -264,11 +265,15 @@
           height: 0.1px;
           background-color: hsl(235, 8%, 26%);
           border: none;
-          margin-left: auto;
-          margin-right: auto;
-          left: 0;
-          right: 0;
+          max-width: 455px;
 
+          @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+          }
+          
           @media screen and (max-width: 468px) {
             margin-top: 1rem;
             width: 90%;
