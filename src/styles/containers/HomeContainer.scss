@@ -97,6 +97,7 @@
           color: #bdbdbd;
           font-family: "Bellefair", serif;
           text-align: justify;
+          max-width: 449px;
 
           @media screen and (max-width: 768px) {
             text-align: center;
@@ -119,8 +120,10 @@
 
       .home-circle {
         display: flex;
-        height: 12rem;
-        width: 12rem;
+        height: 12vw;
+        width: 12vw;
+        min-width: 192px;
+        min-height: 192px;
         align-items: center;
         justify-content: center;
         background-color: white;
