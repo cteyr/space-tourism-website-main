@@ -116,11 +116,10 @@
             align-items: center;
             text-decoration: none;
             color: #bdbdbd;
-            font-size: 1.9vh;
 
             @media screen and (max-width: 768px) {
               P {
-                font-size: 1.9vh;
+                font-size: 0.85rem;
               }
               margin-right: 0vw;
             }
