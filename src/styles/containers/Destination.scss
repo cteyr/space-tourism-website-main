@@ -13,7 +13,7 @@
   background: url("../assets/images/destination/background-destination-desktop.jpg") center
   center no-repeat;
   background-size: cover;
-  height: 140vh;
+  height: 100vh;
   }
 
   @media screen and (max-width: 468px) {
@@ -77,7 +77,7 @@
         
         @media screen and (max-width: 768px) {
           text-align: left;
-            font-size: 1.6rem;
+          font-size: 1.2rem;
           margin-left: 4rem;
         }
 
@@ -100,7 +100,8 @@
 
       @media screen and (max-width: 768px) {
         justify-content: center;
-     
+        width: 90%;
+        height: 90%;
         }
 
         @media screen and (max-width: 468px) {
@@ -141,7 +142,7 @@
         padding-right: 12rem;
 
         @media screen and (max-width: 768px) {
-         top: 1rem;
+         top: -0.5rem;
          padding: 0rem 5rem;
         }
         @media screen and (max-width: 468px) {
@@ -157,8 +158,9 @@
 
         @media screen and (max-width: 768px) {
          justify-content: center;
-          padding-left: 2rem;
-          }
+         padding-left: 2rem;
+         font-size: 0.9rem;
+        }
 
           ul{
             display: flex;
@@ -195,9 +197,8 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            padding-top: 1rem;
-            padding-bottom: 2rem;
-          
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
            }
 
            @media screen and (max-width: 468px) {
@@ -235,7 +236,7 @@
                 display: flex;
                 justify-content: center;
                 padding-bottom: 0rem;
-                font-size: 5.5rem;
+                font-size: 4rem;
                }
 
                @media screen and (max-width: 468px) {
@@ -252,6 +253,7 @@
 
             @media screen and (max-width: 768px) {
               text-align: center;
+              font-size: 1rem;
             }
 
             @media screen and (max-width: 468px) {
@@ -288,6 +290,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: 1rem;
            }
           
           @media screen and (max-width: 468px) {
@@ -307,6 +310,10 @@
               text-transform: uppercase;
               color: #bdbdbd;
 
+              @media screen and (max-width: 768px) {
+                font-size: 1.3rem;
+              }
+
               @media screen and (max-width: 468px) {
                 font-size: 1.3rem;
               }
@@ -322,6 +329,10 @@
               font-size: 1.5rem;
               text-transform: uppercase;
               color: #bdbdbd;
+
+              @media screen and (max-width: 768px) {
+                font-size: 1.3rem;
+              }
 
               @media screen and (max-width: 468px) {
                 font-size: 1.3rem;
