@@ -66,6 +66,10 @@
       @media screen and (max-width: 768px) {
         height: 100%;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
       }
 
       p{
@@ -103,6 +107,7 @@
         justify-content: center;
         width: 90%;
         height: 90%;
+        margin-left: 0px;
         }
 
         @media screen and (max-width: 468px) {
