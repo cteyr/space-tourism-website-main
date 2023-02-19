@@ -133,6 +133,10 @@
         margin-top: 35vh;
         margin-left: 8.2vw;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         @media screen and (max-width: 768px) {
           height: 11rem;
           width: 11rem;
@@ -160,9 +164,6 @@
             font-size: 1.4rem;
           }
 
-          &:hover {
-            cursor: pointer;
-          }
         }
       }
     }
