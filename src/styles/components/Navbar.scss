@@ -16,6 +16,10 @@
   .logo-image {
     height: 50%;
     margin-left: 3vw;
+
+    @media screen and (max-width: 468px) {
+      margin-left: 1.8rem;
+    }
   }
 
   .hamburger {
@@ -23,6 +27,7 @@
     height: 2rem;
     width: 2rem;
     margin-right: 1.8rem;
+
     @media screen and (min-width: 468px) {
       display: none;
     }
@@ -32,6 +37,7 @@
       background: url("../assets/images/shared/icon-hamburger.svg") center
         no-repeat;
     }
+    
     &:hover {
       cursor: pointer;
     }
