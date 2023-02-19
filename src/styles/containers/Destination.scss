@@ -59,8 +59,9 @@
       align-items: center;
       flex-direction: column;
       height: 78%;
-      width: 95%;
+     // width: 95%;
       bottom: 0rem;
+      left: 8vw;
    
       @media screen and (max-width: 768px) {
         height: 100%;
@@ -68,12 +69,11 @@
       }
 
       p{
-       text-align: center;
+       text-align: left;
         width: 100%;
         color: #bdbdbd;
         font-size: 1.8rem;
         word-spacing: 0.5rem;
-        margin-left: -12rem;
         
         @media screen and (max-width: 768px) {
           text-align: left;
@@ -97,6 +97,7 @@
         height: 100%;
         align-items: center;
         justify-content: right;
+        margin-left: 4vw;
 
       @media screen and (max-width: 768px) {
         justify-content: center;
