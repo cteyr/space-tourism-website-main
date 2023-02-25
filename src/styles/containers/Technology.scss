@@ -98,7 +98,9 @@
           @media screen and (max-width: 768px) {
             margin-top: 1.5vh;
             display: flex;
-            width: 250px;
+            width: 100%;
+            justify-content: center;
+            gap: 1rem;
             flex-direction: row;
           }
 
