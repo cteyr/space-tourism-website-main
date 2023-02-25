@@ -50,6 +50,8 @@
 
         @media screen and (max-width: 768px) {
           left: 2rem;
+          top: 1rem;
+          padding-right: 2rem;
         }
 
         .tittle-container{
@@ -79,8 +81,9 @@
           margin-top: 7rem;
 
           @media screen and (max-width: 768px) {
-            height: 100%;
-            margin-top: -6vh;
+            margin-top: 0vh;
+            flex-direction: column-reverse;
+            align-items: center;
           }
 
           .navBar{
@@ -92,6 +95,13 @@
             align-items: center;
           //  gap: 1.9rem;
 
+          @media screen and (max-width: 768px) {
+            margin-top: 1.5vh;
+            display: flex;
+            width: 250px;
+            flex-direction: row;
+          }
+
             .circle{
               display: flex;
               align-items: center;
@@ -101,6 +111,11 @@
               border-radius: 50%;
               border: 1px solid hsl(234, 11%, 52%);
               background-color: transparent;
+
+              @media screen and (max-width: 768px) {
+                height: 7vh;
+                width: 7vh;
+              }
 
               &:hover{
                 cursor: pointer;
@@ -125,10 +140,17 @@
             height: 100%;
             width: 78%;
 
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+
             .tittle{
               p{
                 font-size: 1rem;
                 color: #bdbdbd;
+              }
+              @media screen and (max-width: 768px) {
+                text-align: center;
               }
             }
 
@@ -140,8 +162,8 @@
                 text-transform: uppercase;
 
                 @media screen and (max-width: 768px) {
-                  font-size: 4.5vh;
-                  margin-right: 2rem;
+                  font-size: 3.4vh;
+                  text-align: center;
                 }
               }
             }
@@ -152,7 +174,8 @@
               height: 9rem;
 
               @media screen and (max-width: 768px) {
-                padding-right: 15vw;
+                padding-right: 2rem;
+                display: contents;
               }
 
               p{
@@ -161,7 +184,7 @@
 
                 @media screen and (max-width: 768px) {
                   font-size: 2.3vh;
-                  min-width: 369px;
+                  text-align: center;
                 }
               }
             }
