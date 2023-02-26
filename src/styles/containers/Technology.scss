@@ -63,6 +63,7 @@
           right: 0;
           padding-left: 2rem;
           padding-right: 2rem;
+          justify-content: center;
         }
 
         .tittle-container{
@@ -92,7 +93,7 @@
           margin-top: 7rem;
 
           @media screen and (max-width: 768px) {
-            margin-top: 1rem;
+            margin-top: 0rem;
             flex-direction: column-reverse;
             align-items: center;
           }
