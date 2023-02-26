@@ -103,6 +103,7 @@ const Technology = () => {
           </div>
         </div>
         <div className="right-container">
+          <div className="tittle2"><p><span>03</span>SPACE LAUNCH 101</p></div>
           <div className="imageTechnology">
             <img src={Technology} alt="" />
           </div>
