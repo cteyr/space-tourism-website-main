@@ -94,7 +94,7 @@
 
           @media screen and (max-width: 768px) {
             margin-top: 0rem;
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
           }
 
@@ -105,14 +105,13 @@
             height: 100%;
             width: 11%;
             align-items: center;
-          //  gap: 1.9rem;
 
           @media screen and (max-width: 768px) {
-            margin-top: 1rem;
+            margin-bottom: 1rem;
             display: flex;
             width: 100%;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-direction: row;
           }
 
@@ -164,6 +163,7 @@
                 color: #bdbdbd;
               }
               @media screen and (max-width: 768px) {
+                margin-bottom: 0.5rem;
                 text-align: center;
               }
             }
