@@ -123,6 +123,7 @@ const Crew = () => {
         </div>
         <div className="right-container">
           <div className="imagePesonage">
+            <div className="tittle2"><p><span>02</span>MEET YOUR CREW</p></div>
             <img src={Character} alt="" />
           </div>
         </div>
