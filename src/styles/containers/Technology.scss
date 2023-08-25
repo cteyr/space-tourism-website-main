@@ -106,7 +106,7 @@
             justify-content: space-between;
             height: 100%;
             align-items: center;
-            margin-right: 6rem;
+            margin-right: 5rem;
 
           @media screen and (max-width: 768px) {
             margin-bottom: 1rem;
@@ -154,11 +154,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            width: 78%;
-
-            @media screen and (max-width: 768px) {
-              width: 100%;
-            }
+            width: 100%;
 
             .tittle{
               p{
