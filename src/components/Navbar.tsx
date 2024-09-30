@@ -64,10 +64,6 @@ const Navbar = () => {
   const [moveIndication, setMoveIndication] = useState(getIndication(window.location.toString()));
   const [WidthIndication, setWidthIndication] = useState(getWidth(window.location.toString()));
 
-  window.addEventListener("resize", function(){
-    MoveIndicator(navegateHeader);
-  });
-
   const MoveIndicator = (nameLink: string) => {
     dispatch(changeNavegateHeader(nameLink))
     let elem = document.getElementById(nameLink);
