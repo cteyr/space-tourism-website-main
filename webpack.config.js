@@ -12,7 +12,7 @@ module.exports = {
     styles: "./src/styles/index.scss",
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"],
   },
   output: {
     filename: "[name].js",
@@ -22,6 +22,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,  // También maneja archivos .mjs
+        resolve: {
+          fullySpecified: false,  // Permite importar archivos .mjs sin extensión explícita
+        },
+      },
       { test: /\.tsx?$/i, loader: "babel-loader" },
       {
         test: /\.s?css$/i,

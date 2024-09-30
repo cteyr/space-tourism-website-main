@@ -1,4 +1,8 @@
 import {useState, useEffect, useReducer } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {changeCrewSlice} from '../feature/crewSlice/crewSlice';
+import { RootState } from '../types/types';
+import {useCustomReducer} from '../hooks/customReducer'
 import dataJson from "../data.json"
 
 //@ts-ignore
@@ -10,7 +14,6 @@ import shuttleworth from "../assets/images/crew/image-mark-shuttleworth.png";
 //@ts-ignore
 import glover from "../assets/images/crew/image-victor-glover.png";
 
-
 const initialState = {
   character1: "character1",
   character2: "character2",
@@ -19,50 +22,18 @@ const initialState = {
 };
 
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "character1":
-      return {
-        character1: "selected",
-        character2: "character2",
-        character3: "character3",
-        character4: "character4",
-      };
-    case "character2":
-      return {
-        character1: "character1",
-        character2: "selected",
-        character3: "character3",
-        character4: "character4",
-      };
-    case "character3":
-      return {
-        character1: "character1",
-        character2: "character2",
-        character3: "selected",
-        character4: "character4",
-      };
-    case "character4":
-      return {
-        character1: "character1",
-        character2: "character2",
-        character3: "character3",
-        character4: "selected",
-      };
-  }
-  return state;
-};
-
 const Crew = () => {
-  const [Character, setCharacter]= useState(localStorage.getItem("Character")?localStorage.getItem("Character"):"ansari");
+  const usedispatch = useDispatch();
+  const character = useSelector((state: RootState) => state.crew);
+  const [Character, setCharacter]= useState(character);
   const [numCharacter, setNumCharacter]= useState(3);
-  const [state, dispatch] = useReducer(reducer, initialState);
   const [crewData]= useState([dataJson.crew]);
+  const { state, dispatch } = useCustomReducer(initialState);
 
   useEffect(() => {
-    if(Character=="ansari"){
+    if(Character== "ansari"){
       setCharacter(ansari)
-      dispatch({ type: `character4` });
+      dispatch({ type: 'character4' }); 
       setNumCharacter(3);
     }else if(Character=="glover"){
       setCharacter(glover)
@@ -85,19 +56,19 @@ const Crew = () => {
     if(character=="character1"){
       setCharacter(glover)
       setNumCharacter(0);
-      localStorage.setItem("Character", "glover");
+      usedispatch(changeCrewSlice('glover'))
     }else if(character=="character2"){
       setCharacter(shuttleworth)
       setNumCharacter(1);
-      localStorage.setItem("Character", "shuttleworth");
+      usedispatch(changeCrewSlice('shuttleworth'))
     }else if(character=="character3"){
       setCharacter(hurley)
       setNumCharacter(2);
-      localStorage.setItem("Character", "hurley");
+      usedispatch(changeCrewSlice('hurley'))
     }else {
       setCharacter(ansari)
       setNumCharacter(3);
-      localStorage.setItem("Character", "ansari");
+      usedispatch(changeCrewSlice('ansari'))
     }
   }
 

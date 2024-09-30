@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {changeDestinationNavegate} from "../feature/destinationSlice/destinationSlice";
+import { RootState } from '../types/types';
 import dataJson from "../data.json";
 
 //@ts-ignore
@@ -11,24 +14,27 @@ import Europa from "../assets/images/destination/image-europa.png";
 import Titan from "../assets/images/destination/image-titan.png";
 
 const Destination = () => {
+
+  const destination = useSelector((state:RootState) => state.destination);
+  const dispatch = useDispatch();
   
   const holdMoveIndication = ()=>{
-    if(localStorage.getItem("Destination")==="Mars"){
+    if(destination==="Mars"){
         return 85
-    }else if (localStorage.getItem("Destination")==="Europa"){
+    }else if (destination==="Europa"){
         return 161
-    }else if (localStorage.getItem("Destination")==="Titan"){
+    }else if (destination==="Titan"){
         return 255
     }
     return 0
   }
 
   const widthMoveIndication = ()=>{
-    if(localStorage.getItem("Destination")==="Mars"){
+    if(destination==="Mars"){
         return 44
-    }else if (localStorage.getItem("Destination")==="Europa"){
+    }else if (destination==="Europa"){
         return 62
-    }else if (localStorage.getItem("Destination")==="Titan"){
+    }else if (destination==="Titan"){
         return 46
     }
     return 53
@@ -37,7 +43,7 @@ const Destination = () => {
 
   const [moveIndication, setMoveIndication] = useState( holdMoveIndication());
   const [WidthIndication, setWidthIndication] = useState(widthMoveIndication());
-  const [imageDestination, setImageDestination] = useState(localStorage.getItem("Destination")?localStorage.getItem("Destination"):"Moon");
+  const [imageDestination, setImageDestination] = useState(destination);
   const [destinationData]= useState([dataJson.destinations]);
   const [numPlanet, setNumPlanet]= useState(0);
 
@@ -48,7 +54,7 @@ const Destination = () => {
       setMoveIndication(left);
       var width = elem.offsetWidth;
       setWidthIndication(width);
-      localStorage.setItem("Destination", namePlanet);
+      dispatch(changeDestinationNavegate(namePlanet));
   };
 
   useEffect(() => {

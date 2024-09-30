@@ -3,10 +3,6 @@ import { useEffect } from "react";
 
 const HomeContainer = () => {
 
-  useEffect (()=>{
-    localStorage.setItem("NavBar", "home");
-  },[])
-
   return (
     <div className="homeContainer">
       <div className="mainContainer">

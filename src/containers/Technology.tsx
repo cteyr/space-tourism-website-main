@@ -1,4 +1,8 @@
 import {useState, useEffect, useReducer } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {changeTechnologySlice} from '../feature/technology/technologiSlice';
+import { RootState } from '../types/types';
+import {useCustomReducer} from '../hooks/customReducer';
 import dataJson from "../data.json";
 
 //@ts-ignore
@@ -15,35 +19,13 @@ const initialState = {
 };
 
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "number1":
-      return {
-        number1: "selected",
-        number2: "number2",
-        number3: "number3",
-      };
-    case "number2":
-      return {
-        number1: "number1",
-        number2: "selected",
-        number3: "number3",
-      };
-    case "number3":
-      return {
-        number1: "number1",
-        number2: "number2",
-        number3: "selected",
-      };
-  }
-  return state;
-};
-
 const Technology = () => {
+  const usedispatch = useDispatch();
+  const technology = useSelector((state: RootState) => state.technology)
+  const { state, dispatch } = useCustomReducer(initialState);
   const [technologyData]= useState([dataJson.technology]);
-  const [state, dispatch] = useReducer(reducer, initialState);
   const [numberTechnology, setNumberTechnology]=useState(0);
-  const [Technology, setTechnology]=useState(localStorage.getItem("Technology")?localStorage.getItem("Technology"):"launch_vehicle_portrait");
+  const [Technology, setTechnology]=useState(technology);
   
   useEffect(() => {
     if(Technology=="launch_vehicle_portrait"){
@@ -68,15 +50,15 @@ const Technology = () => {
     if(number=="number1"){
       setNumberTechnology(0);
       setTechnology(launch_vehicle_portrait);
-      localStorage.setItem("Technology", "launch_vehicle_portrait");
+      usedispatch(changeTechnologySlice('launch_vehicle_portrait'));
     }else if(number=="number2"){
       setNumberTechnology(1);
       setTechnology(spaceport_portrait);
-      localStorage.setItem("Technology", "spaceport_portrait");
+      usedispatch(changeTechnologySlice('spaceport_portrait'));
     }else if(number=="number3"){
       setNumberTechnology(2);
       setTechnology(space_capsule_portrait);
-      localStorage.setItem("Technology", "space_capsule_portrait");
+      usedispatch(changeTechnologySlice('space_capsule_portrait'));
     }
   }
 

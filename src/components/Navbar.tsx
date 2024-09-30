@@ -1,9 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { changeNavegateHeader } from "../feature/navegateSlice/navegateSliceHeader";
+import { RootState } from '../types/types';
+
 //@ts-ignore
-import logo from "../assets/images/shared/logo.svg";
+import logo from "../assets/images/shared/logo.svg";  
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const navegateHeader = useSelector((state:RootState) => state.navegateHeader);
+
   const pageWidth  = document.documentElement.scrollWidth;
   const getWidth=(url:string)=>{
     if(url.includes("/destination")){
@@ -58,11 +65,11 @@ const Navbar = () => {
   const [WidthIndication, setWidthIndication] = useState(getWidth(window.location.toString()));
 
   window.addEventListener("resize", function(){
-    MoveIndicator(localStorage.getItem("NavBar"));
+    MoveIndicator(navegateHeader);
   });
 
   const MoveIndicator = (nameLink: string) => {
-    localStorage.setItem("NavBar", `${nameLink}`);
+    dispatch(changeNavegateHeader(nameLink))
     let elem = document.getElementById(nameLink);
     var left = elem.offsetLeft;
     setMoveIndication(left);
