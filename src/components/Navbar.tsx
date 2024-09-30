@@ -12,18 +12,18 @@ const Navbar = () => {
   const navegateHeader = useSelector((state:RootState) => state.navegateHeader);
 
   const pageWidth  = document.documentElement.scrollWidth;
-  const getWidth=(url:string)=>{
-    if(url.includes("/destination")){
+  const getWidth=(navSelected:string)=>{
+    if(navSelected ==  "destination"){
       if(pageWidth<=768){
         return 89;
       }
     return  126;
-    }else if(url.includes("/crew")){
+    }else if(navSelected  == "crew"){
       if(pageWidth<=768){
         return 38;
       }
     return  69;
-    }else if(url.includes("/technology")){
+    }else if(navSelected == "technology"){
       if(pageWidth<=768){
         return 92;
       }
@@ -36,19 +36,19 @@ const Navbar = () => {
       }
   }
 
-  const getIndication=(url:string)=>{
+  const getIndication=(navSelected:string)=>{
     const pageWidth  = document.documentElement.scrollWidth;
-    if(url.includes("/destination")){
+    if(navSelected ==  "destination"){
       if(pageWidth<=768){
         return 73;
       }
       return 128;
-    }else if(url.includes("/crew")){
+    }else if(navSelected  == "crew"){
       if(pageWidth<=768){
         return 194;
       }
       return 311;
-    }else if(url.includes("/technology")){
+    }else if(navSelected == "technology"){
       if(pageWidth<=768){
         return 264;
       }
@@ -61,8 +61,8 @@ const Navbar = () => {
     }
   }
 
-  const [moveIndication, setMoveIndication] = useState(getIndication(window.location.toString()));
-  const [WidthIndication, setWidthIndication] = useState(getWidth(window.location.toString()));
+  const [moveIndication, setMoveIndication] = useState(getIndication(navegateHeader));
+  const [WidthIndication, setWidthIndication] = useState(getWidth(navegateHeader));
 
   const MoveIndicator = (nameLink: string) => {
     dispatch(changeNavegateHeader(nameLink))
