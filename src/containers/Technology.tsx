@@ -2,7 +2,6 @@ import {useState, useEffect, useReducer } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {changeTechnologySlice} from '../feature/technology/technologiSlice';
 import { RootState } from '../types/types';
-import {useCustomReducer} from '../hooks/customReducer';
 import dataJson from "../data.json";
 
 //@ts-ignore
@@ -18,11 +17,36 @@ const initialState = {
   number3: "number3",
 };
 
+// Define el reducer antes de usarlo
+const reducer = (state, action) => {
+  switch (action.type) {
+      case "number1":
+          return {
+              number1: "selected",
+              number2: "number2",
+              number3: "number3",
+          };
+      case "number2":
+          return {
+              number1: "number1",
+              number2: "selected",
+              number3: "number3",
+          };
+      case "number3":
+          return {
+              number1: "number1",
+              number2: "number2",
+              number3: "selected",
+          };
+      default:
+          return state;
+  }
+};
 
 const Technology = () => {
   const usedispatch = useDispatch();
   const technology = useSelector((state: RootState) => state.technology)
-  const { state, dispatch } = useCustomReducer(initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   const [technologyData]= useState([dataJson.technology]);
   const [numberTechnology, setNumberTechnology]=useState(0);
   const [Technology, setTechnology]=useState(technology);

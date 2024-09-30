@@ -2,7 +2,6 @@ import {useState, useEffect, useReducer } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {changeCrewSlice} from '../feature/crewSlice/crewSlice';
 import { RootState } from '../types/types';
-import {useCustomReducer} from '../hooks/customReducer'
 import dataJson from "../data.json"
 
 //@ts-ignore
@@ -21,6 +20,41 @@ const initialState = {
   character4: "selected",
 };
 
+// Define el reducer antes de usarlo
+const reducer = (state, action) => {
+  switch (action.type) {
+      case "character1":
+          return {
+              character1: "selected",
+              character2: "character2",
+              character3: "character3",
+              character4: "character4",
+          };
+      case "character2":
+          return {
+              character1: "character1",
+              character2: "selected",
+              character3: "character3",
+              character4: "character4",
+          };
+      case "character3":
+          return {
+              character1: "character1",
+              character2: "character2",
+              character3: "selected",
+              character4: "character4",
+          };
+      case "character4":
+          return {
+              character1: "character1",
+              character2: "character2",
+              character3: "character3",
+              character4: "selected",
+          };
+      default:
+          return state;
+  }
+};
 
 const Crew = () => {
   const usedispatch = useDispatch();
@@ -28,7 +62,7 @@ const Crew = () => {
   const [Character, setCharacter]= useState(character);
   const [numCharacter, setNumCharacter]= useState(3);
   const [crewData]= useState([dataJson.crew]);
-  const { state, dispatch } = useCustomReducer(initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     if(Character== "ansari"){
