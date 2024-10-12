@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeNavegateHeader } from "../feature/navegateSlice/navegateSliceHeader";
 import { RootState } from '../types/types';
+import { MenuNav } from "../components/MenuNav";
 
 //@ts-ignore
 import logo from "../assets/images/shared/logo.svg";  
@@ -76,7 +77,7 @@ const Navbar = () => {
   return (
     <div className="header">
       <img className="logo-image" src={logo} alt="" />
-      <div className="hamburger"></div>
+      <MenuNav/>
       <div className="navbar">
         <nav>
           <ul>

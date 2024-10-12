@@ -24,27 +24,6 @@
     }
   }
 
-  .hamburger {
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-    margin-right: 1.8rem;
-
-    @media screen and (min-width: 468px) {
-      display: none;
-    }
-
-    @media screen and (max-width: 468px) {
-      display: visible;
-      background: url("../assets/images/shared/icon-hamburger.svg") center
-        no-repeat;
-    }
-    
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   .navbar {
     display: flex;
     flex-direction: column;
