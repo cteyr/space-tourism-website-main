@@ -18,16 +18,16 @@ const MenuNav = () => {
           </Button>
           <Menu id="menu" {...bindMenu(popupState)}>
             <MenuItem onClick={() => { navigate('/'); popupState.close(); }}>
-              Home
+              <p id="optionMenu">Home</p>
             </MenuItem>
             <MenuItem onClick={() => { navigate('/destination'); popupState.close(); }}>
-              Destination
+              <p id="optionMenu">Destination</p>
             </MenuItem>
             <MenuItem onClick={() => { navigate('/crew'); popupState.close(); }}>
-              Crew
+            <p id="optionMenu">Crew</p>
             </MenuItem>
             <MenuItem onClick={() => { navigate('/technology'); popupState.close(); }}>
-              Technology
+              <p id="optionMenu">Technology</p>
             </MenuItem>
           </Menu>
         </React.Fragment>
